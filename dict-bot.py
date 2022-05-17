@@ -1,5 +1,6 @@
 import glob
 import sys
+import json
 
 files = glob.glob(sys.argv[1]) #get files
 print(f"checkingfiles:{files}")
@@ -33,4 +34,8 @@ for i in files:
                 process(lines, k, x)
 
 
-print(dic)
+#you need to change [filepath].
+#this is to save dict as json type.
+with open("filepath","w", encoding="utf-8") as f: 
+    json.dump(dic, f, indent=4)
+
