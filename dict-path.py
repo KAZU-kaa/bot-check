@@ -17,7 +17,7 @@ def process(words, locat):
     else:
         dic[word] = dic[word]+1
 
-for i in files:
+for i in files: #if you set one file, you need change this line
     with open(i, "r", encoding="utf-8") as f:
         lines = csv.reader(f)
         for k in lines:
